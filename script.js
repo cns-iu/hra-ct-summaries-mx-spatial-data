@@ -25,7 +25,7 @@ async function fetchData(filePath) {
   }
   
   // Function to create a plot using Plotly.js
-  function createPlot(data) {
+  function createPlot(containerId, data) {
     const xData = data.map(row => row.cell_type); // Replace 'x' with the column name containing x-axis data
     const yData = data.map(row => row.count); // Replace 'y' with the column name containing y-axis data
   
@@ -40,25 +40,35 @@ async function fetchData(filePath) {
     ];
   
     const layout = {
-      title: 'Combined CSV Data Plot', // Customize the plot title
+      title: 'Cell Type Counts', // Customize the plot title
       xaxis: {
-        title: 'X Axis', // Customize the x-axis label
+        title: 'Cell Types', // Customize the x-axis label
       },
       yaxis: {
-        title: 'Y Axis', // Customize the y-axis label
+        title: 'Cel Type Counts', // Customize the y-axis label
       },
     };
   
-    Plotly.newPlot('plotly-chart', plotData, layout);
+    Plotly.newPlot(containerId, plotData, layout);
   }
   
   // Main function to load and plot data from all CSV files in the directory
   async function main() {
     try {
-      const directoryPath = 'intestine_omap_2_0001/cell_type_counts'; // Replace 'data' with the name of the directory containing CSV files
-      const csvFilePaths = await getCSVFilesInDirectory(directoryPath);
-      const mergedData = await mergeDataFromCSVFiles(csvFilePaths);
-      createPlot(mergedData);
+        const directories = [
+            'intestine_omap_2_0001/cell_type_counts', // Replace 'data' with the name of the first directory containing CSV files
+            'skin_omap_4_0001/cell_type_counts', // Add more directory names for additional directories
+          ];
+      //const directoryPath = 'intestine_omap_2_0001/cell_type_counts'; // Replace 'data' with the name of the directory containing CSV files
+      for (const directory of directories) {
+        const csvFilePaths = await getCSVFilesInDirectory(directory);
+        const data = [];
+        for (const filePath of csvFilePaths) {
+          const csvData = await fetchData(filePath);
+          data.push(...csvData);
+        }
+        createPlot(`plotly-chart-${directories.indexOf(directory) + 1}`, data);
+      }
     } catch (error) {
       console.error('Error:', error);
     }
