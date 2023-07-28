@@ -1,22 +1,60 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Cell Type Counts for Multiplexed Spatial Datasets</title>
-  <!-- Add necessary CSS or external stylesheets if required -->
-</head>
-<body>
-    <h1>Cell Type Counts for Multiplexed Spatial Datasets</h1>
-    <p>Source Data on Github: <a href="https://github.com/cns-iu/hra-ct-summaries-mx-spatial-data">https://github.com/cns-iu/hra-ct-summaries-mx-spatial-data</a></p>
-  <!-- Add containers for the plots -->
-  <h2>Cell Type Summary for Intestine Data from John Hickey aligned with OMAP-2</h2>
-  <div id="plotly-chart-1"></div>
-  <h2>Cell Type Summary for Skin Data from GE Research aligned with OMAP-4</h2>
-  <div id="plotly-chart-2"></div>
-  <!-- Add more containers for additional plots if needed -->
-
-  <!-- Add the necessary scripts -->
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-  <script src="script.js"></script>
-</body>
+<html lang="en">
+  <head>
+    <title>Cell Type Counts for Multiplexed Spatial Datasets</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="icon" type="image/png" href="./previews/img/favicon.png" />
+    <link rel="apple-touch-icon" href="./previews/img/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./previews/img/apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./previews/img/apple-touch-icon-114x114.png"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="main-logo">
+        <a
+          href="https://cns-iu.github.io/hra-vccf-cell-distance-visualizations/"
+          title="Link to VCCF Preview Homepage"
+          ><img src="./previews/img/logo-hubmap.svg" alt="HuBMAP logo" class="logo"
+        /></a>
+      </div>
+    </header>
+    <div class="main">
+        <h1>Cell Type Counts for Multiplexed Spatial Datasets</h1>
+        <p>Source Data on Github: <a href="https://github.com/cns-iu/hra-ct-summaries-mx-spatial-data">https://github.com/cns-iu/hra-ct-summaries-mx-spatial-data</a></p>
+      <!-- Add containers for the plots -->
+      <h2>Cell Type Summary for Intestine Data from John Hickey aligned with OMAP-2</h2>
+      <div id="plotly-chart-1"></div>
+      <h2>Cell Type Summary for Skin Data from GE Research aligned with OMAP-4</h2>
+      <div id="plotly-chart-2"></div>
+      <!-- Add more containers for additional plots if needed -->
+    
+      <!-- Add the necessary scripts -->
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+      <script src="script.js"></script>
+    </div>
+    <footer class="main-footer">
+      <p>
+        <small
+          >©
+          <script>
+            new Date().getFullYear() > 2010 &&
+              document.write(new Date().getFullYear());
+          </script>
+          All Rights Reserved.</small
+        >
+      </p>
+    </footer>
+  </body>
 </html>
