@@ -40,7 +40,7 @@ async function fetchData(filePath) {
     ];
   
     const layout = {
-      title: 'Cell Type Counts', // Customize the plot title
+      //title: 'Cell Type Counts', // Customize the plot title
       xaxis: {
         title: 'Cell Types', // Customize the x-axis label
       },
