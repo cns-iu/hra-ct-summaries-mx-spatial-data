@@ -14,8 +14,8 @@ const csvFilePaths = [
   
   // Function to create a plot using Plotly.js
   function createPlot(data) {
-    const xData = data.map(row => row.x); // Replace 'x' with the column name containing x-axis data
-    const yData = data.map(row => row.y); // Replace 'y' with the column name containing y-axis data
+    const xData = data.map(row => row.cell_type); // Replace 'x' with the column name containing x-axis data
+    const yData = data.map(row => row.count); // Replace 'y' with the column name containing y-axis data
   
     const plotData = [
       {
