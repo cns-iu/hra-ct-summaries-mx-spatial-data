@@ -19,23 +19,27 @@ const csvFilePaths = [
   
     const plotData = [
       {
-        x: xData,
-        y: yData,
-        type: 'bar', // Change the plot type as needed (scatter, bar, etc.)
-        mode: '', // Customize the plot mode as needed
+        labels: xData,
+        values: yData,
+        type: 'pie', // Change the plot type as needed (scatter, bar, etc.)
+        //mode: '', // Customize the plot mode as needed
         name: 'Data Plot',
       },
     ];
   
-    const layout = {
-      title: 'CSV Data Plot', // Customize the plot title
-      xaxis: {
-        title: 'X Axis', // Customize the x-axis label
-      },
-      yaxis: {
-        title: 'Y Axis', // Customize the y-axis label
-      },
-    };
+    // const layout = {
+    //   title: 'CSV Data Plot', // Customize the plot title
+    //   xaxis: {
+    //     title: 'X Axis', // Customize the x-axis label
+    //   },
+    //   yaxis: {
+    //     title: 'Y Axis', // Customize the y-axis label
+    //   },
+    // };
+    var layout = {
+        height: 400,
+        width: 500
+      };
   
     Plotly.newPlot('plotly-chart', plotData, layout);
   }
