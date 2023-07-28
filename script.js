@@ -33,9 +33,9 @@ async function fetchData(filePath) {
       {
         x: xData,
         y: yData,
-        type: 'scatter', // Change the plot type as needed (scatter, bar, etc.)
-        mode: 'lines+markers', // Customize the plot mode as needed
-        name: 'Data Plot',
+        type: 'bar', // Change the plot type as needed (scatter, bar, etc.)
+        //mode: 'lines+markers', // Customize the plot mode as needed
+        name: 'Cell Type Counts',
       },
     ];
   
