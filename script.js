@@ -37,8 +37,8 @@ const csvFilePaths = [
     //   },
     // };
     var layout = {
-        height: 400,
-        width: 500
+        height: 4000,
+        width: 5000
       };
   
     Plotly.newPlot('plotly-chart', plotData, layout);
