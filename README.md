@@ -8,6 +8,6 @@ Each directory in the root directory corresponds to one type of data collection.
 
 ## Dataset Description
 
-| Directory Name | Description | Number of HuBMAP Datasets | CT Summary Source |
-| ------------- | ------------- | ------------- | ------------- |
-| intestine_omap_2_0001 | CODEX Datasets for large and small intestine from John Hickey using OMAP-2| 64 | [Dryad dataset from data provider](https://doi.org/10.5061/dryad.pk0p2ngrf)  |
+| Directory Name | Description | Number of HuBMAP Datasets | CT Summary Source | Paper |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| intestine_omap_2_0001 | CODEX Datasets for large and small intestine from John Hickey using OMAP-2| 64 | [Dryad dataset from data provider](https://doi.org/10.5061/dryad.pk0p2ngrf) | [Hickey, J.W., Becker, W.R., Nevins, S.A. et al. Organization of the human intestine at single-cell resolution. Nature 619, 572–584 (2023). https://doi.org/10.1038/s41586-023-05915-x](https://doi.org/10.1038/s41586-023-05915-x) |
